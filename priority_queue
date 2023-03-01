@@ -1,0 +1,56 @@
+//priority queue with mean heap
+// ascending order
+
+#include <iostream>
+#include <queue>
+#include <vector>
+
+using namespace std;
+
+int main() {
+    int k = 3;
+    vector<int> arr = {5, 2, 7, 3, 6, 1, 4};
+
+    priority_queue<int, vector<int>, greater<int>> pq;
+    for (int i = 0; i < arr.size(); i++) {
+        pq.push(arr[i]);
+    }
+
+    for (int i = 0; i < k; i++) {
+        cout << pq.top() << " ";
+        pq.pop();
+    }
+    cout << endl;
+
+    return 0;
+}
+
+//priority queue with max heap
+// descending order
+
+/*
+
+#include <iostream>
+#include <queue>
+#include <vector>
+
+using namespace std;
+
+int main() {
+    int k = 3;
+    vector<int> arr = {5, 2, 7, 3, 6, 1, 4};
+
+    priority_queue<int, vector<int>, less<int>> pq;
+    for (int i = 0; i < arr.size(); i++) {
+        pq.push(arr[i]);
+    }
+
+    for (int i = 0; i < k; i++) {
+        cout << pq.top() << " ";
+        pq.pop();
+    }
+    cout << endl;
+
+    return 0;
+}
+*/
